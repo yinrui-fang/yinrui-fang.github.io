@@ -5,11 +5,19 @@ title: Personal experience
 
 <div class="card-columns">
     {% comment %}
-    Sort the projects by date, putting those without dates last
+    动态生成从小学到大学的经历卡片
     {% endcomment %}
-    {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-    {% assign projects_by_date = projects_by_date | reverse %}
-    {% for p in projects_by_date %}
-        {% include project-card.html project=p %}
+    
+    {% assign education_experience = site.education | sort: 'start_date', 'first' %}
+    
+    {% for experience in education_experience %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ experience.institution }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ experience.degree }}</h6>
+                <p class="card-text">{{ experience.description }}</p>
+                <p class="card-text"><small class="text-muted">开始日期: {{ experience.start_date }} - 结束日期: {{ experience.end_date }}</small></p>
+            </div>
+        </div>
     {% endfor %}
 </div>
