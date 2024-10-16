@@ -17,6 +17,9 @@ title: Personal experience
                 <h6 class="card-subtitle mb-2 text-muted">{{ experience.degree }}</h6>
                 <p class="card-text">{{ experience.description }}</p>
                 <p class="card-text"><small class="text-muted">开始日期: {{ experience.start_date }} - 结束日期: {{ experience.end_date }}</small></p>
+                {% if experience.url %}
+                    <a href="{{ experience.url }}" class="btn btn-primary">查看详情</a>  <!-- 插入链接 -->
+                {% endif %}
             </div>
         </div>
     {% endfor %}
