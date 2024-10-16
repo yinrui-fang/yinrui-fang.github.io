@@ -27,17 +27,21 @@ role-tables:
 
 <gradio-app src="https://yinruifang-test.hf.space" theme_mode="light"></gradio-app>
 
-<div id="people">
-    <h2>People</h2>
-    {% for role-table in page.role-tables %}
-        <section class="people row justify-content-between">
-            {% for role-column in role-table %}
-                <div class="col-md-{{ role-column.width }}">
-                    {% for role in role-column.roles %}
-                        {% include role-people.html role=role image=role-column.image %}
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </section>
-    {% endfor %}
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的爱好展示</title>
+</head>
+<body>
+
+    <div>
+        <div>
+        <h2>我喜欢的bilibili视频</h2>
+        <iframe width="600" height="400" src="https://www.bilibili.com/video/BV1HA2NYgEMe" frameborder="0" allowfullscreen></iframe>
+    	</div>
+        <h2>我喜欢的图片</h2>
+        <img src="屏幕截图 2021-05-09 210840.png" alt="描述我的爱好" width="600">
+    </div>
+
+</body>
+</html>
