@@ -14,29 +14,29 @@ encoding: utf-8
 base: ''
 
 education:
-  - institution: "某小学"
+  - institution: "阳曲县新阳街小学"
     degree: "小学教育"
     description: "在这里完成了基础教育。"
-    start_date: "2010年9月"
-    end_date: "2016年6月"
+    start_date: "2008年9月"
+    end_date: "2014年6月"
 
-  - institution: "某中学"
+  - institution: 阳曲县第二中学"
     degree: "初中教育"
     description: "在这里学习了初中课程。"
-    start_date: "2016年9月"
-    end_date: "2019年6月"
+    start_date: "2014年9月"
+    end_date: "2017年6月"
 
-  - institution: "某高中"
+  - institution: "山西大学附属中学"
     degree: "高中教育"
     description: "在这里完成了高中学业。"
-    start_date: "2019年9月"
-    end_date: "2022年6月"
+    start_date: "2017年9月"
+    end_date: "2020年6月"
 
-  - institution: "某大学"
-    degree: "计算机科学学士"
-    description: "在这里获得计算机科学学位。"
-    start_date: "2022年9月"
-    end_date: "2026年6月"
+  - institution: "北京师范大学"
+    degree: "数学学士"
+    description: "在这里获得学士学位。"
+    start_date: "2020年9月"
+    end_date: "2024年6月"
 
 # make pages for the _projects folder
 collections:
