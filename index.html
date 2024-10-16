@@ -35,11 +35,28 @@ role-tables:
 <body>
 
     <div>
-        <div>
+        <div class="video-wrapper">
         <h2>我喜欢的bilibili视频</h2>
-        <iframe width="1200" height="800" src="https://www.bilibili.com/video/BV1HA2NYgEMe" frameborder="0" allowfullscreen></iframe>
-	<iframe width="1200" height="800" src="https://www.bilibili.com/video/BV1Hn4y1d7Tz" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="auto" src="https://www.bilibili.com/video/BV1HA2NYgEMe" frameborder="0" allowfullscreen></iframe>
+	<iframe width="100%" height="auto" src="https://www.bilibili.com/video/BV1Hn4y1d7Tz" frameborder="0" allowfullscreen></iframe>
+	<style>
+    	.video-wrapper {
+        	position: relative;
+        	padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        	height: 0;
+        	overflow: hidden;
+   	 }
+    
+    	.video-wrapper iframe {
+       		position: absolute;
+        	top: 0;
+        	left: 0;
+        	width: 100%;
+        	height: 100%;
+    }
+</style>
     	</div>
+	    
         <h2>我喜欢的图片</h2>
         <img src="屏幕截图 2021-05-09 210840.png" alt="" width="600">
     </div>
