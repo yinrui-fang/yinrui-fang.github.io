@@ -19,6 +19,24 @@ title: Home
     <title>在 HTML 中运行 Python</title>
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* 设置字体 */
+            background-color: #f0f0f0; /* 设置背景颜色 */
+            color: #333; /* 设置默认文本颜色 */
+        }
+
+        h1 {
+            color: #66CCFF; /* 设置标题颜色 */
+            font-size: 2em; /* 设置标题字体大小 */
+        }
+
+        .fortune-output {
+            color: #FF5733; /* 设置运势输出的颜色 */
+            font-size: 1.5em; /* 设置运势输出的字体大小 */
+            margin-top: 10px; /* 添加顶部外边距 */
+        }
+    </style>
 </head>
 <body>
 
@@ -31,9 +49,10 @@ career_fortune = randint(0, 100)
 love_fortune = randint(0, 100)
 wealth_fortune = randint(0, 100)
 
-print(f"事业运: {career_fortune}")
-print(f"桃花运: {love_fortune}")
-print(f"财运: {wealth_fortune}")
+# 使用 HTML 输出运势
+print(f"<div class='fortune-output'>事业运: {career_fortune}</div>")
+print(f"<div class='fortune-output'>桃花运: {love_fortune}</div>")
+print(f"<div class='fortune-output'>财运: {wealth_fortune}</div>")
 </py-script>
 
 </body>
