@@ -15,15 +15,27 @@ title: Home
 	
 <head>
     <meta charset="UTF-8">
-    <title>每日运势</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>在 HTML 中运行 Python</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 <body>
-    <h1>今日运势</h1>
-    <ul>
-        <li>事业运: {{ career }}</li>
-        <li>桃花运: {{ love }}</li>
-        <li>财运: {{ wealth }}</li>
-    </ul>
+
+<h1>今日运势</h1>
+
+<py-script>
+from random import randint
+
+career_fortune = randint(0, 100)
+love_fortune = randint(0, 100)
+wealth_fortune = randint(0, 100)
+
+print(f"事业运: {career_fortune}")
+print(f"桃花运: {love_fortune}")
+print(f"财运: {wealth_fortune}")
+</py-script>
+
 </body>
 <p>
 
