@@ -31,11 +31,6 @@ title: Home
             font-size: 2em; /* 设置标题字体大小 */
         }
 
-        .fortune-output {
-            color: #FF5733; /* 设置运势输出的颜色 */
-            font-size: 1.5em; /* 设置运势输出的字体大小 */
-            margin-top: 10px; /* 添加顶部外边距 */
-        }
     </style>
 </head>
 <body>
@@ -49,6 +44,14 @@ career_fortune = randint(0, 100)
 love_fortune = randint(0, 100)
 wealth_fortune = randint(0, 100)
 
+	<style>
+	.fortune-output {
+            color: #FF5733; /* 设置运势输出的颜色 */
+            font-size: 1.5em; /* 设置运势输出的字体大小 */
+            margin-top: 10px; /* 添加顶部外边距 */
+        }
+    </style>
+	</style>
 # 使用 HTML 输出运势
 print(f"<div class='fortune-output'>事业运: {career_fortune}</div>")
 print(f"<div class='fortune-output'>桃花运: {love_fortune}</div>")
@@ -93,7 +96,7 @@ print(f"<div class='fortune-output'>财运: {wealth_fortune}</div>")
 
             h2 {
                 color: pink; /* 设置标题颜色 */
-                margin: 1em 0; /* 添加上下外边距 */
+                margin: 2em 0; /* 添加上下外边距 */
             }
         </style>
 
