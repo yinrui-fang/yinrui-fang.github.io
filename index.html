@@ -10,9 +10,31 @@ title: Home
 ></script>
 
 <p>
-<gradio-app src="https://yinruifang-test.hf.space" theme_mode="light"></gradio-app>
-<gradio-app src="https://huggingface.co/spaces/yinruifang/test" theme_mode="light"></gradio-app>
+    <gradio-app src="https://yinruifang-test.hf.space" theme_mode="light"></gradio-app>
 </p>
+
+<script>
+    const accessToken = "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"; // 在这里插入您的令牌
+    const modelId = "space"; // 替换为您要调用的模型ID
+
+    // 示例函数：调用Hugging Face API
+    function callHuggingFaceAPI(inputText) {
+        fetch(`https://api-inference.huggingface.co/models/${modelId}`, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${accessToken}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ inputs: inputText })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    }
+
+    // 调用示例
+    callHuggingFaceAPI("您的输入文本");
+</script>
 	
 <head>
     <meta charset="UTF-8">
